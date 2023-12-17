@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de salários</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: rgb(4, 4, 71);
+
+        }
+        h1{
+            font-size: 3em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="resultado">
+        <h1 id="valor">  </h1>
+    </div>
+    <script>
+    const cargo = prompt("Qual seu Cargo?");
+    const salario = prompt("Qual seu salário?");
+    const valor = document.getElementById("valor");
+    let novoSalario;
+    let aumento;
+    
+    switch (cargo){
+        case 'estagiario': aumento = 2;
+        break;
+        case 'analista': aumento = 1.5;
+        break;
+        case 'gerente': aumento = 1.3;
+        break;
+        case 'presidente': aumento = 1.1;
+        default: alert("escolha um dos cargos: estagiario, analiste, gerente ou presidente");
+    }
+
+    novoSalario = salario * aumento
+
+    valor.innerHTML = novoSalario;
+
+    </script>
+</body>
+</html>
